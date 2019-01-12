@@ -1,5 +1,5 @@
 pipeline {
-	agent {label'cent'}
+	agent {label'ubuntu'}
     stages {
         stage ('checkout') {
             steps {
@@ -17,6 +17,6 @@ pipeline {
 	 	 sh 'rm -rf /opt/chef-repo/cookbooks/tomcat/files/*'
                 sh 'mv /home/zippyops/jenkins/workspace/Jenkins-UpStream/java-sample-app/target/* /chef-repo/cookbooks/tomcat/files/ 
             }
-           }        
+           }       
     }
 }
